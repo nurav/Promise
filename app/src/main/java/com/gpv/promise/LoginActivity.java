@@ -12,6 +12,10 @@ package com.gpv.promise;
         import android.widget.TextView;
         import android.widget.Toast;
 
+        import com.parse.LogInCallback;
+        import com.parse.ParseException;
+        import com.parse.ParseUser;
+
         import butterknife.ButterKnife;
         import butterknife.Bind;
 
@@ -76,8 +80,20 @@ public class LoginActivity extends AppCompatActivity{
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
+                        ParseUser.logInInBackground("Jerry", "showmethemoney", new LogInCallback() {
+                            public void done(ParseUser user, ParseException e) {
+                                if (user != null) {
+                                    // Hooray! The user is logged in.
+                                    onLoginSuccess();
+                                } else {
+                                    Toast.makeText(LoginActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    onLoginFailed();
+                                    // Signup failed. Look at the ParseException to see what happened.
+                                }
+                            }
+                        });
                         // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
+
                         // onLoginFailed();
                         progressDialog.dismiss();
                     }
@@ -109,8 +125,6 @@ public class LoginActivity extends AppCompatActivity{
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-
         _loginButton.setEnabled(true);
     }
 
