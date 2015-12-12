@@ -18,28 +18,36 @@
             android:id="@+id/imageview_current_title"
             android:layout_width="match_parent"
             android:layout_height="20dp"
-            android:src=""
             android:padding="5dp"
             />
 
-        <LinearLayout
+        <RelativeLayout
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            >
 
             <TextView
-                android:id="@+id/textview_name_proposed_title"
+                android:id="@+id/textview1_current_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name:Colaba-Andheri Metro"/>
+                android:text="Name:Colaba-Andheri Metro"
+                android:layout_alignParentLeft="true"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src=""
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"/>
 
             <TextView
-                android:id="@+id/textview_city_proposed_title"
+                android:id="@+id/textview2_current_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="City: Mumbai"/>
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"/>
 
-        </LinearLayout>
+        </RelativeLayout>
     </LinearLayout>
 </android.support.v7.widget.CardView>
