@@ -37,15 +37,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Colaba-Andheri Metro"
-                android:textStyle="italic"
-                android:ellipsize="marquee" />
+                android:ellipsize="marquee"
+                android:textColor="#BF360C"
+
+                />
 
             <TextView
                 android:id="@+id/textview_city_proposed_title"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text=" Mumbai"
-                android:textStyle="bold" />
+                android:text="Mumbai"
+                android:textColor="#424242"
+                android:textSize="14dp"
+                 />
 
         </LinearLayout>
     </LinearLayout>
