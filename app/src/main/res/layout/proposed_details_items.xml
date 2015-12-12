@@ -165,7 +165,7 @@
                 android:id="@+id/links_proposed_links"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Details:"
+                android:text="Notes And Articles:"
                 android:textColor="#01579B"
                 android:textSize="25sp"/>
             <TextView
