@@ -3,11 +3,16 @@
 <android.support.v7.widget.CardView
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/currentproject_card_view"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:id="@+id/card_view_current_project"
+    android:layout_gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="150dp"
+    android:layout_margin="5dp"
     card_view:cardCornerRadius="4dp"
-    android:layout_margin="5dp">
+    card_view:contentPadding="10dp"
+    card_view:cardElevation="10sp">
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,9 +21,13 @@
 
         <ImageView
             android:id="@+id/imageview_current_title"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:padding="5dp"
+            android:paddingTop="16dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/testpic"
+
             />
 
         <RelativeLayout
@@ -27,26 +36,56 @@
             android:layout_height="wrap_content"
             >
 
+
+            <LinearLayout
+                android:id="@+id/lin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <TextView
+                android:layout_weight="1"
                 android:id="@+id/textview1_current_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name:Colaba-Andheri Metro"
-                android:layout_alignParentLeft="true"/>
+                android:text="Colaba-Andheri Metro"
+                android:layout_alignParentLeft="true"
+                android:textSize="24sp"
+                android:layout_marginTop="10dp"
+                android:paddingRight="16dp"
+                android:paddingLeft="16dp"
+                android:textColor="#0288D1"
 
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"/>
+                />
+
+                <ImageButton
+                    android:layout_weight="8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/testpic"
+                    android:layout_toRightOf="@+id/textview1_current_title"
+                    />
+
+            </LinearLayout>
 
             <TextView
-                android:id="@+id/textview2_current_title"
+                android:id="@+id/textview2_sub_title"
+                android:text="Subtitle lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"/>
+                android:layout_height="80dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="8dp"
+                android:paddingTop="8dp"
+                android:textSize="14sp"
+                android:layout_below="@+id/lin1"
+                android:ellipsize="end"
+                android:maxLines="2"
+                />
+
+
 
         </RelativeLayout>
+
+
     </LinearLayout>
 </android.support.v7.widget.CardView>
