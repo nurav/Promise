@@ -27,7 +27,7 @@
 
     </android.support.v7.widget.RecyclerView>
     <TextView
-        android:id="@+id/text_propose_home"
+        android:id="@+id/text_current_home"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Current Projects"
@@ -42,6 +42,6 @@
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp">
     </android.support.v7.widget.RecyclerView>
-    
+
 
 </LinearLayout>
