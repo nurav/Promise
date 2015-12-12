@@ -32,17 +32,31 @@
             android:layout_height="wrap_content"
             android:text="Navi Mumbai Airport"
             android:textAllCaps="true"
+            android:textColor="#1565C0"
             android:textSize="30sp"
             android:layout_margin="10sp"
             />
-        <Button
-            android:layout_width="124dp"
-            android:layout_height="wrap_content"
-            android:text="Follow"
-            android:id="@+id/button_proposed_details"
-            android:layout_gravity="right"
-            android:paddingRight="10dp"
-            android:layout_marginRight="50dp"/>
+
+
+
+
+
+
+
+
+
+           <android.support.v7.widget.AppCompatButton
+               android:layout_marginRight="25dp"
+               android:paddingRight="10dp"
+               android:layout_gravity="right"
+               android:id="@+id/button_proposed_details"
+               android:layout_width="124dp"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="5dp"
+               android:layout_marginBottom="3dp"
+               android:padding="12dp"
+               android:background="#2196F3"
+               android:text="Follow"/>
        </LinearLayout>
 
     </LinearLayout>
@@ -53,14 +67,19 @@
     <View
        android:layout_width="match_parent"
        android:layout_height="1dp"
-       android:background="#655050"
+       android:background="#1A237E"
        android:layout_marginBottom="5dp"
        android:orientation="vertical" />
    <android.support.v7.widget.CardView
+       xmlns:card_view="http://schemas.android.com/apk/res-auto"
+       xmlns:android="http://schemas.android.com/apk/res/android"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:layout_margin="10dp"
-       android:padding="5dp">
+       android:padding="5dp"
+       card_view:cardCornerRadius="4dp"
+       card_view:contentPadding="10dp"
+       card_view:cardElevation="10sp">
     <LinearLayout
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
@@ -75,13 +94,14 @@
            android:layout_width="wrap_content"
            android:layout_height="wrap_content"
            android:text="Description"
+           android:textColor="#01579B"
            android:textSize="25sp"
            />
        <TextView
            android:id="@+id/desc_para_proposed_details"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
-           android:text="the project was planned..."
+           android:text="the project was planned lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom"
            />
 
 
@@ -90,10 +110,15 @@
    </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:layout_margin="10dp">
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        card_view:cardElevation="10sp">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -107,14 +132,49 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Details:"
+            android:textColor="#01579B"
             android:textSize="25sp"/>
         <TextView
             android:id="@+id/details_para_proposed_details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="the project was planned..."/>
+            android:text="the project was planned lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom"/>
 
     </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        card_view:cardElevation="10sp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/links_proposed_links"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Details:"
+                android:textColor="#01579B"
+                android:textSize="25sp"/>
+            <TextView
+                android:id="@+id/links_para_proposed_links"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="the project was planned lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom lorem ipsum diom"/>
+
+        </LinearLayout>
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
