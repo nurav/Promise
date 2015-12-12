@@ -13,6 +13,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.gpv.promise.R;
+import com.parse.FindCallback;
+import com.parse.ParseException;
+import com.parse.ParseFile;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -24,6 +32,8 @@ public class HomeFragment extends Fragment {
 
     @Bind(R.id.recycler_proposed_home)
     public RecyclerView mProposedProjectListView;
+
+    private List<ParseObject> mProjects;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -40,6 +50,14 @@ public class HomeFragment extends Fragment {
         if (getArguments() != null) {
 
         }
+        final ParseQuery<ParseObject> projects = new ParseQuery<ParseObject> ("Project");
+        projects.whereContains("status", "Proposed");
+        projects.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                mProjects = objects;
+            }
+        });
     }
 
     @Override
@@ -76,7 +94,16 @@ public class HomeFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(CurrentProjectAdapter.ViewHolder holder, int position) {
+            holder.currentProjectDescriptionView.setText(mProjects.get(position).getString("projectDescription"));
+            try {
+                Picasso.with(getContext())
+                        .load(mProjects.get(position)
+                                .getParseFile("image")
+                                .getFile())
+                        .into(holder.currentProjectImageView);
+            } catch (ParseException e) {
 
+            }
         }
     }
 
