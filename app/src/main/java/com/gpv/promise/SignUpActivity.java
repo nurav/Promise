@@ -11,6 +11,10 @@ package com.gpv.promise;
         import android.widget.TextView;
         import android.widget.Toast;
 
+        import com.parse.ParseException;
+        import com.parse.ParseUser;
+        import com.parse.SignUpCallback;
+
         import butterknife.ButterKnife;
         import butterknife.Bind;
 
@@ -66,18 +70,35 @@ public class SignUpActivity  extends AppCompatActivity  {
         progressDialog.setMessage("Creating Account...");
         progressDialog.show();
 
-        String name = _nameText.getText().toString();
-        String email = _emailText.getText().toString();
-        String password = _passwordText.getText().toString();
+        final String name = _nameText.getText().toString();
+        final String email = _emailText.getText().toString();
+        final String password = _passwordText.getText().toString();
 
         // TODO: Implement your own signup logic here.
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
                     public void run() {
+                        ParseUser user = new ParseUser();
+                        user.setUsername(name);
+                        user.setPassword(password);
+                        user.setEmail(email);
+
+                        user.signUpInBackground(new SignUpCallback() {
+                            public void done(ParseException e) {
+                                if (e == null) {
+                                    onSignupSuccess();
+                                    // Hooray! Let them use the app now.
+                                } else {
+                                    Toast.makeText(SignUpActivity.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                                    onSignupFailed();
+                                    // Sign up didn't succeed. Look at the ParseException
+                                    // to figure out what went wrong
+                                }
+                            }
+                        });
                         // On complete call either onSignupSuccess or onSignupFailed
                         // depending on success
-                        onSignupSuccess();
                         // onSignupFailed();
                         progressDialog.dismiss();
                     }
@@ -92,8 +113,6 @@ public class SignUpActivity  extends AppCompatActivity  {
     }
 
     public void onSignupFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
-
         _signupButton.setEnabled(true);
     }
 
