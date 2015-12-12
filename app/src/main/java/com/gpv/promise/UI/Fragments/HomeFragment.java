@@ -107,4 +107,50 @@ public class HomeFragment extends Fragment {
         }
     }
 
+/*
+TO DO:
+CHANGE THE INTERNAL METHODS
+@@Pratik
+
+ */
+    class ProposedProjectAdapter extends RecyclerView.Adapter<ProposedProjectAdapter.ViewHolder> {
+
+        class ViewHolder extends RecyclerView.ViewHolder {
+            @Bind(R.id.imageview_proposed_title)
+            ImageView proposedProjectImageView;
+            @Bind(R.id.textview_name_proposed_title)
+            TextView proposedProjectTitleView;
+            @Bind(R.id.textview_city_proposed_title)
+            TextView proposedProjectDescriptionView;
+
+            ViewHolder(View v) {
+                super(v);
+                ButterKnife.bind(this, v);
+            }
+        }
+        public int getItemCount() {
+            return 0;
+        }
+
+        @Override
+        public ProposedProjectAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            return null;
+        }
+
+        @Override
+        public void onBindViewHolder(ProposedProjectAdapter.ViewHolder holder, int position) {
+            holder.proposedProjectDescriptionView.setText(mProjects.get(position).getString("projectDescription"));
+            try {
+                Picasso.with(getContext())
+                        .load(mProjects.get(position)
+                                .getParseFile("image")
+                                .getFile())
+                        .into(holder.proposedProjectImageView);
+            } catch (ParseException e) {
+
+            }
+        }
+    }
+
+
 }
