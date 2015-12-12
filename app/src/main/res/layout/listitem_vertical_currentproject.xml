@@ -26,7 +26,7 @@
             android:padding="5dp"
             android:paddingTop="16dp"
             android:layout_marginTop="12dp"
-            android:src="@drawable/testpic"
+            android:src="@drawable/metro"
 
             />
 
@@ -62,7 +62,7 @@
                     android:layout_height="20dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentTop="true"
-                    android:src="@drawable/testpic"
+                    android:src="@drawable/metro"
                     android:layout_toRightOf="@+id/textview1_current_title"
                     />
 
