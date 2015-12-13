@@ -12,4 +12,5 @@
 
     <string name="parse_app_id">sZ6V3avuFEvPCCW3MM0yX2RqarplALkLz9gNYAxh</string>
     <string name="parse_client_key">U6HTwURK3MHpcH3QDu5FF08tIZhMg1ktwtwMkVlk</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

@@ -1,0 +1,240 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gpv.promise.FollowedProjectsFragment">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_current_project"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageview_current_title"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/metro"
+
+                />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/lin1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/textview1_current_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Monorail phase-2"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:textColor="#0288D1"
+
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="The Rs 2,460 crore project (excluding tax) is being executed by a consortium of LnT and Scomi from Malaysia. Mumbai Monorail is the first service of its kind in the country and is regulated under the tramway Act."
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/lin1"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/metro"
+
+                />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/lin2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bangalore Metro Phase II"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:textColor="#0288D1"
+
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textview2_sub_title"
+                    android:text="The State Government accorded approval vide Order No. UDD 127 BMR 2010 dated 4 January 2011 for preparation of the detailed project report (DPR) for Phase II by the DMRC. The high power committee (HPC), in July 2011, gave in-principle clearance to proceed with Phase II. The Karnataka government gave in-principle approval to Phase II of the Namma Metro project on 3 January 2012. Phase II was cleared by the expenditure finance committee (EFC) in August 2013. The Union cabinet announced that it has approved plans for phase II on January 30, 2014. The estimated total cost for Phase II is around ₹264.05 billion (US$3.9 billion). The project cost of ₹264.05 billion (US$3.9 billion) is the 2011–12 price level, which it is set to escalate at 5 per cent every year with increasing cost of inputs. The Union government will share that part of cost escalation due to increase in central levies, while the Karnataka State and BMRCL have to bear any other escalation. According to the experts, the total project cost for Phase II is estimated to reach at least ₹300.00 billion (US$4.5 billion) at the start of construction itself."
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/lin2"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        >
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:paddingTop="16dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/metro"
+
+                />
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/lin3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Outer Ring Road Redvpt"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="24sp"
+                        android:layout_marginTop="10dp"
+                        android:paddingRight="16dp"
+                        android:paddingLeft="16dp"
+                        android:textColor="#0288D1"
+
+                        />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:text="Outer Ring Road (Kannada: ಬೆಂಗಳೂರು ಔಟರ್ ರಿಂಗ್ ರೋಡ್ ) is a road that runs around most of the perimeter of Bangalore, India. This 62 km long road was developed by the Bangalore Development Authority and different sections were opened progressively between 1996 and 2002."
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="8dp"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/lin3"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    />
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

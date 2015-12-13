@@ -10,7 +10,7 @@
     android:layout_margin="5dp"
     card_view:cardCornerRadius="4dp"
     card_view:contentPadding="10dp"
-    card_view:cardElevation="10sp">
+    >
 
 
 
@@ -55,16 +55,6 @@
                 android:textColor="#0288D1"
 
                 />
-
-                <ImageButton
-                    android:layout_weight="8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentTop="true"
-                    android:src="@drawable/metro"
-                    android:layout_toRightOf="@+id/textview1_current_title"
-                    />
 
             </LinearLayout>
 

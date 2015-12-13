@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gpv.promise.UI.Fragments.HomeFragment">
+
+    <TextView
+        android:id="@+id/text_propose_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proposed Projects"
+        android:padding="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_proposed_home"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="5dp"
+        />
+    <TextView
+        android:id="@+id/text_current_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Projects"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_current_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:padding="5dp"
+        />
+
+
+</LinearLayout>
